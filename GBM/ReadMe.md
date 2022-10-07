@@ -17,7 +17,7 @@
    - scipy - version 1.7.1
    - xgboost - version 1.4.2
 4. Taking the `car` dataset as an example, follow the steps below to get the pruned model,then you can switch the working directory to `hw_impl/` to generate a vivado-based hardware project
-   - `./prune_xgb.sh`  
+   - `./prune_xgb.sh`   
    - `./prune_lgb.sh`
 
 

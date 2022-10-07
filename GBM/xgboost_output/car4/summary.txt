@@ -1,0 +1,121 @@
+report : avg acc
+origin_200: 0.9981210691823899
+odd_0_200: 0.9974999999999999
+even_0_200: 0.9987421383647799
+odd_1_200: 0.9974999999999999
+even_1_200: 0.99811713836478
+odd_3_200: 0.99562106918239
+even_3_200: 0.99811713836478
+kplus_odd_1_200: 0.99875
+kplus_even_1_200: 0.9987421383647799
+kplus_odd_3_200: 0.9981249999999999
+kplus_even_3_200: 0.9987421383647799
+OOitr_30_100_3: 0.9912264150943397
+OOitr_40_100_3: 0.9931092767295597
+OOitr_50_100_3: 0.9962421383647799
+OOitr_30_66_5: 0.9893396226415095
+OOitr_40_100_5: 0.9924842767295597
+OOitr_50_66_5: 0.9918514150943396
+OOitr_30_140_3: 0.9862028301886794
+OOitr_40_140_3: 0.9912224842767297
+OOitr_50_140_3: 0.9924803459119497
+OOitr_30_200_5: 0.9887146226415094
+OOitr_40_200_5: 0.9887146226415094
+OOitr_50_200_5: 0.9899685534591196
+
+report : chosen number of trees : 
+origin_200: 
+	200.0 in total 200 trees
+odd_0_200: 
+	100.0 in total 200 trees
+even_0_200: 
+	100.0 in total 200 trees
+odd_1_200: 
+	100.0 in total 200 trees
+even_1_200: 
+	101.0 in total 200 trees
+odd_3_200: 
+	101.0 in total 200 trees
+even_3_200: 
+	102.0 in total 200 trees
+kplus_odd_1_200: 
+	100.0 in total 200 trees
+kplus_even_1_200: 
+	101.0 in total 200 trees
+kplus_odd_3_200: 
+	101.0 in total 200 trees
+kplus_even_3_200: 
+	102.0 in total 200 trees
+OOitr_30_100_3: 
+	30.0 in total 100 trees
+OOitr_40_100_3: 
+	40.0 in total 100 trees
+OOitr_50_100_3: 
+	50.0 in total 100 trees
+OOitr_30_66_5: 
+	30.0 in total 66 trees
+OOitr_40_100_5: 
+	40.0 in total 100 trees
+OOitr_50_66_5: 
+	50.0 in total 66 trees
+OOitr_30_140_3: 
+	30.0 in total 140 trees
+OOitr_40_140_3: 
+	40.0 in total 140 trees
+OOitr_50_140_3: 
+	50.0 in total 140 trees
+OOitr_30_200_5: 
+	30.0 in total 200 trees
+OOitr_40_200_5: 
+	40.0 in total 200 trees
+OOitr_50_200_5: 
+	50.0 in total 200 trees
+
+report : time
+origin_200: 
+	time cost = 0.10291809750000916
+odd_0_200: 
+	time cost = 0.0604390271000053
+even_0_200: 
+	time cost = 0.058420374299997135
+odd_1_200: 
+	time cost = 0.058120209100003706
+even_1_200: 
+	time cost = 0.0591039807000147
+odd_3_200: 
+	time cost = 0.058839266799984816
+even_3_200: 
+	time cost = 0.058447963499973096
+kplus_odd_1_200: 
+	time cost = 0.1918612836999994
+kplus_even_1_200: 
+	time cost = 0.1931967735000068
+kplus_odd_3_200: 
+	time cost = 0.19164311799997158
+kplus_even_3_200: 
+	time cost = 0.19159885890000616
+OOitr_30_100_3: 
+	time cost = 6.741345065799978
+OOitr_40_100_3: 
+	time cost = 7.546092993200008
+OOitr_50_100_3: 
+	time cost = 8.290518878400036
+OOitr_30_66_5: 
+	time cost = 4.87581635079994
+OOitr_40_100_5: 
+	time cost = 7.240824491500005
+OOitr_50_66_5: 
+	time cost = 6.780611022399965
+OOitr_30_140_3: 
+	time cost = 7.500300499500004
+OOitr_40_140_3: 
+	time cost = 8.60220667789999
+OOitr_50_140_3: 
+	time cost = 9.720050213200011
+OOitr_30_200_5: 
+	time cost = 8.441061985700022
+OOitr_40_200_5: 
+	time cost = 9.992535514200004
+OOitr_50_200_5: 
+	time cost = 11.56512813940002
+

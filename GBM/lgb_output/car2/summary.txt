@@ -1,0 +1,56 @@
+report : avg acc
+origin_200: 1.0
+OOitr_30_100_3: 0.9598309748427672
+OOitr_40_100_3: 0.9893317610062894
+OOitr_50_100_3: 0.9937264150943397
+OOitr_30_60_15: 0.9786595911949686
+OOitr_40_60_15: 0.9843081761006289
+OOitr_50_60_15: 0.9855699685534592
+OOitr_30_80_20: 0.9780227987421384
+OOitr_40_80_20: 0.9899567610062894
+OOitr_50_80_20: 0.9918435534591195
+
+report : chosen number of trees : 
+origin_200: 
+	200.0 in total 200 trees
+OOitr_30_100_3: 
+	30.0 in total 100 trees
+OOitr_40_100_3: 
+	40.0 in total 100 trees
+OOitr_50_100_3: 
+	50.0 in total 100 trees
+OOitr_30_60_15: 
+	30.0 in total 60 trees
+OOitr_40_60_15: 
+	40.0 in total 60 trees
+OOitr_50_60_15: 
+	50.0 in total 60 trees
+OOitr_30_80_20: 
+	30.0 in total 80 trees
+OOitr_40_80_20: 
+	40.0 in total 80 trees
+OOitr_50_80_20: 
+	50.0 in total 80 trees
+
+report : time
+origin_200: 
+	time cost = 0.025130794999999928
+OOitr_30_100_3: 
+	time cost = 6.40173359880001
+OOitr_40_100_3: 
+	time cost = 7.306816760600019
+OOitr_50_100_3: 
+	time cost = 8.071496675099999
+OOitr_30_60_15: 
+	time cost = 2.1815744476999894
+OOitr_40_60_15: 
+	time cost = 3.563177781900012
+OOitr_50_60_15: 
+	time cost = 4.958020738600003
+OOitr_30_80_20: 
+	time cost = 1.9985870037999995
+OOitr_40_80_20: 
+	time cost = 3.816827201999992
+OOitr_50_80_20: 
+	time cost = 5.483036510599985
+

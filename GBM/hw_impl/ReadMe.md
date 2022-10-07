@@ -25,6 +25,7 @@
     - place_power.rpt：硬件工程的功耗报告
     - place_utilization.rpt: 硬件工程的开销报告
     - 目录结构 `hardware_xgb/`存放着分别存放XGBoost与SAR硬件报告 `hardware_lgb/`存放着分别存放LightGBM与SAR硬件报告 
+    ```
     hardware_xgb/
     ├── car4_OO_fold0
     │   └── vivado_out
@@ -44,5 +45,6 @@
         └── vivado_out
             ├── place_power.rpt
             └── place_utilization.rpt
+    ```
 
     

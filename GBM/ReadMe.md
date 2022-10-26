@@ -38,7 +38,7 @@ Taking the `car` dataset as an example, follow the steps below to get the pruned
          * `4`  &nbsp;# maximum depth of decision trees
       + Expected output
          * trained LightGBM model - after ten-fold cross-validation, the model corresponding to each fold is saved in the folder `lgb_models/`
-         * pruned model - use the SHR and SAR methods to prune LightGBM model, save pruned model information in the file `lgb_ouput/weight.csv`.Different decision trees have different weights, and a weight of 0 indicates a reduced decision tree.
+         * pruned model - use the SHR and SAR methods to prune LightGBM model, save pruned model information in the file `lgb_ouput/weight.csv`. Different decision trees have different weights, and a weight of 0 indicates a reduced decision tree.
          * Model performance - the performance of LightGBM model and pruned model are recorded in the following files, `lgb_ouput/acc.csv` for the average accuracy of the model, `lgb_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `lgb_ouput/tree_num.csv` for the number of decision trees
       + Purpose of the experiment  
       To get trained LightGBM model and pruned model, furthermore compare their performance.

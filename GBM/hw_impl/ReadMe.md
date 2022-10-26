@@ -1,30 +1,43 @@
-1. 对于XGBoost与LightGBM约简前后的硬件对比实验
-2. 函数描述
-    - dump_tree.py: 保存XGBoost梯度提升树树结构描述文件，
-    - get_verilog.py: 调用utilts包中的硬件代码构建函数，生成梯度提升树的硬件代码
-    - get_verilog_bucket.py: 调用utilts包中的硬件代码构建函数，并使用用于降低资源开销与功耗的分桶方法，生成梯度提升树的硬件代码
-    - run.tcl: vivado脚本，用于创建viavado工程，进行综合仿真，生成资源占用与硬件功耗报告
-    - run_vivado.py: 批量运行vivado脚本
-    - report.py: 读取vivado资源占用与硬件功耗报告，生成约简前后以及使用分桶方法实验报告
-3. 文件夹 utils放置用于读取树结构，生成硬件代码的源代码
-    - Tree_Reader.py: 根据XGBoost梯度提升树树结构描述文件，读取用于构建硬件代码的树
-    - LGB_Tree_Reader.py: 根据LightGBM提供的描述梯度提升树树结构API，读取用于构建硬件代码的树
-    - Build_vlg.py: 根据读取到的树，构建硬件代码
-    - combine_leaves.py: 分桶方法实现 
-4.  Software used:   
+# Hardware comparison experiment
+1. Function description
+    - dump_tree.py: Save the XGBoost gradient boosting tree structure description file
+    - get_verilog.py: Call the hardware code construction function in the package `utilts` to generate the hardware code of the gradient boosting tree
+    - get_verilog_bucket.py: Call the hardware code construction function in the package `utilts`, and use the bucketing method to reduce resource overhead and power consumption to generate the hardware code of the gradient boosting tree
+    - run.tcl: the vivado script used to create a viavado project, perform comprehensive simulation, and generate resource usage and hardware power consumption reports
+    - run_vivado.py: Batch run vivado scripts
+    - report.py: Read the vivado resource overhead and hardware power consumption report, generate the experimental report for before and after reduction, and use the bucket method
+2. The folder `utils` places the source code for reading the tree structure, generating the hardware code
+    - Tree_Reader.py: According to the XGBoost gradient boosting tree tree structure description file, read the tree used to build the hardware code
+    - LGB_Tree_Reader.py: Read the tree used to build the hardware code according to the description gradient boosting tree structure API provided by LightGBM
+    - Build_vlg.py: Build hardware code based on the tree read
+    - combine_leaves.py: Bucket method implementation 
+3. Software used:   
     OS:  Ubuntu 18.04.5 LTS 
     Python 3.8.12
     Vivado 2018.3 
-5. 以car数据集为例,按照一下步骤生成生成硬件工程和仿真实验报告
+4. Taking the car dataset as an example, follow the steps below to generate and generate hardware engineering and simulation experiment reports
     - `./dump_tree.sh`
+        + Input - Trained XGBoost models in the folder `../xgboost_models/` 
+        + Output -  XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/`
+        + Purpose  - Get the decision tree structure for automatic hardware code generation
     - `./get_verilog.sh`
+        + Input - XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/` or the description gradient boosting tree structure API provided by LightGBM
+        + Output  - The hardware code of the gradient boosting tree
     - `./get_verilog_bucket.sh`
+        + Input - XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/` or the description gradient boosting tree structure API provided by LightGBM
+        + Output - The hardware code of the gradient boosting tree using the bucketing method
     - `python run_vivado.py`
+        + Input - The hardware code of the gradient boosting tree
+        + Output - Vivado project with resource overhead and hardware power consumption report
     - `python report.py`
-6. 硬件报告
-    - place_power.rpt：硬件工程的功耗报告
-    - place_utilization.rpt: 硬件工程的开销报告
-    - 目录结构 `hardware_xgb/`存放着分别存放XGBoost与SAR硬件报告 `hardware_lgb/`存放着分别存放LightGBM与SAR硬件报告 
+        + Input - Vivado resource overhead and hardware power consumption report
+        + Output - the files `report_lgb.txt`,`report_lgb.txt`,`report_xgb_bucket` recorded the value of `LUTS`, `FFs`, `Power`
+5. Hardware report
+    - place_power.rpt：Power consumption reporting for hardware project
+    - place_utilization.rpt: Overhead reporting for hardware project 
+    - The floder `hardware_xgb/` stores XGBoost and SAR hardware reports respectively and the floder `hardware_lgb/` stores LightGBM and SAR hardware reports respectively
+    - Directory structure
+    
     ```
     hardware_xgb/
     ├── car4_OO_fold0
@@ -46,5 +59,3 @@
             ├── place_power.rpt
             └── place_utilization.rpt
     ```
-
-    

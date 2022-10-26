@@ -12,8 +12,8 @@
     - Build_vlg.py: Build hardware code based on the tree read
     - combine_leaves.py: Bucket method implementation 
 3. Software used:   
-    OS:  Ubuntu 18.04.5 LTS 
-    Python 3.8.12
+    OS:  Ubuntu 18.04.5 LTS  
+    Python 3.8.12  
     Vivado 2018.3 
 4. Taking the car dataset as an example, follow the steps below to generate and generate hardware engineering and simulation experiment reports
     - `./dump_tree.sh`

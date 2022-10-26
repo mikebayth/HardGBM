@@ -19,7 +19,7 @@
 4. How to build HardGBM project  
 Taking the `car` dataset as an example, follow the steps below to get the pruned model,then you can switch the working directory to `hw_impl/` to generate a vivado-based hardware project
    - `python prune_xgb.py car car4 200 10`
-      + Purpose of the experiment  
+      + Purpose 
       To get trained XGBoost model and pruned model, furthermore compare their performance.
       + Input parameter description:
          * `car` &nbsp;#  dataset name
@@ -29,9 +29,9 @@ Taking the `car` dataset as an example, follow the steps below to get the pruned
       + Expected output
          * trained XGBoost model - after ten-fold cross-validation, the model corresponding to each fold is saved in the folder `xgboost_models/`
          * pruned model - use the SHR and SAR methods to prune XGBoost model, save pruned model information in the file `xgboost_ouput/weight.csv`.Different decision trees have different weights, and a weight of 0 indicates a reduced decision tree.
-         * Model performance - the performance of XGboost model and pruned model are recorded in the following files, `xgboost_ouput/acc.csv` for the average accuracy of the model, `xgboost_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `xgboost_ouput/tree_num.csv` for the number of decision trees
+         * Model performance - the performance of XGboost model and pruned model are recorded in the following files, `xgboost_ouput/acc.csv` for the average accuracy of the model, `xgboost_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `xgboost_ouput/tree_num.csv` for the number of decision trees.
    - `python prune_lgb.py car car2 200 4` 
-       + Purpose of the experiment  
+       + Purpose  
       To get trained XGBoost model and pruned model, furthermore compare their performance.
        + Input parameter description:
          * `car` &nbsp;#  dataset name
@@ -41,4 +41,4 @@ Taking the `car` dataset as an example, follow the steps below to get the pruned
       + Expected output
          * trained LightGBM model - after ten-fold cross-validation, the model corresponding to each fold is saved in the folder `lgb_models/`
          * pruned model - use the SHR and SAR methods to prune LightGBM model, save pruned model information in the file `lgb_ouput/weight.csv`. Different decision trees have different weights, and a weight of 0 indicates a reduced decision tree.
-         * Model performance - the performance of LightGBM model and pruned model are recorded in the following files, `lgb_ouput/acc.csv` for the average accuracy of the model, `lgb_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `lgb_ouput/tree_num.csv` for the number of decision trees
+         * Model performance - the performance of LightGBM model and pruned model are recorded in the following files, `lgb_ouput/acc.csv` for the average accuracy of the model, `lgb_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `lgb_ouput/tree_num.csv` for the number of decision trees.

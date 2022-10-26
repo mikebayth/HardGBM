@@ -3,7 +3,7 @@
     - dump_tree.py: Save the XGBoost gradient boosting tree structure description file
     - get_verilog.py: Call the hardware code construction function in the package `utilts` to generate the hardware code of the gradient boosting tree
     - get_verilog_bucket.py: Call the hardware code construction function in the package `utilts`, and use the bucketing method to reduce resource overhead and power consumption to generate the hardware code of the gradient boosting tree
-    - run.tcl: the vivado script used to create a viavado project, perform comprehensive simulation, and generate resource usage and hardware power consumption reports
+    - run.tcl: The vivado script used to create a viavado project, perform comprehensive simulation, and generate resource usage and hardware power consumption reports
     - run_vivado.py: Batch run vivado scripts
     - report.py: Read the vivado resource overhead and hardware power consumption report, generate the experimental report for before and after reduction, and use the bucket method
 2. The folder `utils` places the source code for reading the tree structure, generating the hardware code
@@ -31,7 +31,7 @@
         + Output - Vivado project with resource overhead and hardware power consumption report
     - `python report.py`
         + Input - Vivado resource overhead and hardware power consumption report
-        + Output - the files `report_lgb.txt`,`report_lgb.txt`,`report_xgb_bucket` recorded the value of `LUTS`, `FFs`, `Power`
+        + Output - The files `report_lgb.txt`,`report_lgb.txt`,`report_xgb_bucket` recorded the value of `LUTS`, `FFs`, `Power`
 5. Hardware report
     - place_power.rpt：Power consumption reporting for hardware project
     - place_utilization.rpt: Overhead reporting for hardware project 

@@ -1,11 +1,11 @@
 # Hardware comparison experiment
 1. Function description
     - dump_tree.py: Save the XGBoost gradient boosting tree structure description file
-    - get_verilog.py: Call the hardware code construction function in the package `utilts` to generate the hardware code of the gradient boosting tree
+    - get_verilog.py: Call the hardware code construction function in the package `utilts` to generate the hardware code of the gradient boosting trees
     - get_verilog_bucket.py: Call the hardware code construction function in the package `utilts`, and use the bucketing method to reduce resource overhead and power consumption to generate the hardware code of the gradient boosting tree
-    - run.tcl: The vivado script used to create a viavado project, perform comprehensive simulation, and generate resource usage and hardware power consumption reports
-    - run_vivado.py: Batch run vivado scripts
-    - report.py: Read the vivado resource overhead and hardware power consumption report, generate the experimental report for before and after reduction, and use the bucket method
+    - run.tcl: The Vivado script used to create a viavado project, perform comprehensive simulation, and generate resource usage and hardware power consumption reports
+    - run_vivado.py: Batch run Vivado scripts
+    - report.py: Read the Vivado resource overhead and hardware power consumption report, generate the experimental report for before and after reduction, and use the bucket method
 2. The folder `utils` places the source code for reading the tree structure, generating the hardware code
     - Tree_Reader.py: According to the XGBoost gradient boosting tree tree structure description file, read the tree used to build the hardware code
     - LGB_Tree_Reader.py: Read the tree used to build the hardware code according to the description gradient boosting tree structure API provided by LightGBM
@@ -17,19 +17,23 @@
     Vivado 2018.3 
 4. Taking the car dataset as an example, follow the steps below to generate and generate hardware engineering and simulation experiment reports
     - `./dump_tree.sh`
+        + Purpose - Get the decision tree structure for automatic hardware code generation
         + Input - Trained XGBoost models in the folder `../xgboost_models/` 
         + Output -  XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/`
-        + Purpose  - Get the decision tree structure for automatic hardware code generation
-    - `./get_verilog.sh`
+    - `./get_verilog.sh`  
+        + Purpose - generate verilog code for the gradient boosting trees(XBoost/LightGBM)
         + Input - XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/` or the description gradient boosting tree structure API provided by LightGBM
         + Output  - The hardware code of the gradient boosting tree
     - `./get_verilog_bucket.sh`
+         + Purpose - generate verilog code for the gradient boosting trees(XBoost/LightGBM) using the bucketing method
         + Input - XGBoost gradient boosting tree structure description files dumped in the floder `dump_tree/` or the description gradient boosting tree structure API provided by LightGBM
         + Output - The hardware code of the gradient boosting tree using the bucketing method
     - `python run_vivado.py`
+        + Purpose - Batch run Vivado scripts to perform hardware simulation
         + Input - The hardware code of the gradient boosting tree
         + Output - Vivado project with resource overhead and hardware power consumption report
     - `python report.py`
+        + Purpose - Read overhead and power consumption values based on Vivado hardware reports(place_utilization.rpt, place_power.rpt)
         + Input - Vivado resource overhead and hardware power consumption report
         + Output - The files `report_lgb.txt`,`report_lgb.txt`,`report_xgb_bucket` recorded the value of `LUTS`, `FFs`, `Power`
 5. Hardware report

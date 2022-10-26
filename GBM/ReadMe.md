@@ -28,7 +28,7 @@ Taking the `car` dataset as an example, follow the steps below to get the pruned
          * trained XGBoost model - after ten-fold cross-validation, the model corresponding to each fold is saved in the folder `xgboost_models/`
          * pruned model - use the SHR and SAR methods to prune XGBoost model, save pruned model information in the file `xgboost_ouput/weight.csv`.Different decision trees have different weights, and a weight of 0 indicates a reduced decision tree.
          * Model performance - the performance of XGboost model and pruned model are recorded in the following files, `xgboost_ouput/acc.csv` for the average accuracy of the model, `xgboost_ouput/acc_std.csv` for the variance of the model's accuracy, time.csv for model runtime, `xgboost_ouput/tree_num.csv` for the number of decision trees
-      + Purpose of the experiment
+      + Purpose of the experiment  
       To get trained XGBoost model and pruned model, furthermore compare their performance.
    - `python prune_lgb.py car car2 200 4`
        + Input parameter description:

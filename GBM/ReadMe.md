@@ -1,6 +1,6 @@
 1. Python code for ensemble prune method for gradient boosted trees
 2. Function description
-   - load_data.py: Perform data preprocessing, data cleaning, and load data for model training and testing. The datasets that are stored in `dataset\` directory come from the open source data set of UCI, Kaggle and data world.
+   - load_data.py: Perform data preprocessing, data cleaning, and load data for model training and testing. The datasets that are stored in `dataset\` directory come from the open source data set of UCI, Kaggle and data.world
    - train_xgb.py: Train XGBoost and test the accuracy using ten-fold cross-validation, then save the trained model, training time, accuracy and standard deviation 
    - train_lgb.py: Train LightGBM and test the accuracy using ten-fold cross-validation, then save the trained model, training time, accuracy and standard deviation 
    - prune_xgb.py: Use `train_xgb.py` to train XGBoost and use the SHR and SAR methods in `callback.py` to prune XGBoost, and record the accuracy of the pruned model, running time, the pruned model, etc.
